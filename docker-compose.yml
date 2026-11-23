@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mushroom-ai-app:
+    build: .
+    container_name: mushroom_classification_app
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
